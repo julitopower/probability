@@ -33,6 +33,8 @@ SET(CMAKE_CXX_FLAGS "-std=c++0x ${CMAKE_CXX_FLAGS}")
 
 #Make sure dependencies are available
 FIND_PACKAGE(Boost COMPONENTS unit_test_framework REQUIRED)
+MESSAGE(STATUS "Boost include dir: ${Boost_INCLUDE_DIR}")
+INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIR})
 
 #Include subdirectories
 ADD_SUBDIRECTORY(src)
